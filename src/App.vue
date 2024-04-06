@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header>
-      <!-- Header içeriği; örneğin navigasyon menüsü -->
+      <Navbar />
     </header>
     <main>
       <router-view></router-view>
@@ -13,11 +13,18 @@
 </template>
 
 <script>
+import Navbar from './components/Navbar.vue';
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Navbar
+  }
 }
 </script>
 
 <style>
-/* Global stil tanımlamaları */
+body {
+  background-color: #F6F8FF; /* Bileşene özel arkaplan rengi */
+}
 </style>
