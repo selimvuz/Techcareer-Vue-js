@@ -1,5 +1,8 @@
 <template>
 <div class="container mt-5">
+  <div v-if="alertMessage" class="alert alert-warning">
+    {{ alertMessage }}
+  </div>
   <div class="grid">
     <div class="grid-item" v-for="product in products" :key="product.id">
       <div class="card mb-4 shadow-sm">
@@ -10,7 +13,7 @@
           <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group">
               <button type="button" class="btn btn-sm btn-outline-secondary">Detay</button>
-              <button type="button" class="btn btn-sm btn-outline-secondary">Sepete Ekle</button>
+              <button type="button" class="btn btn-sm btn-outline-secondary" @click="addToCart(product)">Sepete Ekle</button>
             </div>
             <small class="text-muted">{{ product.price }}</small>
           </div>
@@ -32,11 +35,29 @@ data() {
         { id: 1, name: 'Java 101', description: 'Yeni başlayanlar için Java. Profesyoneller tarafından hazırlanan 100 saatlik video içerik, sınavlar, projeler, ek kaynaklar ve dahası...', price: '2499,99₺', image: '/images/java101.jpg' },
         { id: 2, name: 'Vue', description: "En popüler ön yüz kütüphanlerinden Vue için A'dan Z'ye eğitimi içerir. Toplam 40 saatlik video içerik ve mentor desteği!", price: '1799,99₺', image: '/images/vuejs.png' },
         { id: 3, name: 'React', description: "Front-end alanında bir üst seviyeye çıkmak isteyenlere özel!", price: '2999,99₺', image: '/images/react.png' },
-        { id: 3, name: 'Python', description: "Veri biliminin temellerine Python ile giriş yapın.", price: '3299,99₺', image: '/images/python.png' },
-        { id: 4, name: 'Go', description: "En modern dillerden biri olan Golang için dopdolu bir eğitim paketi.", price: '2999,99₺', image: '/images/golang.png' },
-        { id: 3, name: 'Rust', description: "Rust ile sahiplik ve ödünç alma konseptleri arasında kaybolun!", price: '699,99₺', image: '/images/rust.jpg' },
-      ]
+        { id: 4, name: 'Python', description: "Veri biliminin temellerine Python ile giriş yapın.", price: '3299,99₺', image: '/images/python.png' },
+        { id: 5, name: 'Go', description: "En modern dillerden biri olan Golang için dopdolu bir eğitim paketi.", price: '2999,99₺', image: '/images/golang.png' },
+        { id: 6, name: 'Rust', description: "Rust ile sahiplik ve ödünç alma konseptleri arasında kaybolun!", price: '699,99₺', image: '/images/rust.jpg' },
+      ],
+      alertMessage: '',
     }
+},
+methods: {
+  addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let found = cart.find(prod => prod.id === product.id);
+    if (found) {
+      // Ürün zaten varsa, uyarı mesajını güncelle
+      this.alertMessage = 'Bu ürün zaten sepetinizde.';
+      setTimeout(() => {
+        this.alertMessage = ''; // 3 saniye sonra mesajı temizle
+      }, 3000);
+    } else {
+      cart.push(product);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      this.$router.push('/cart');
+    }
+  }
 }
 }
 </script>
