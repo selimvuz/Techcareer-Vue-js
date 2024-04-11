@@ -41,17 +41,17 @@
     <section class="why-techcareer">
       <h2>Neden Techcareer.shop?</h2>
       <article>
-        <h3>Ücretli/Ücretsiz etkinliklere katıl</h3>
+        <h3>Ücretli/Ücretsiz etkinliklere katıl!</h3>
         <p>Yolun başındasın ama en güzel aşamasındasın! Sektörün için gereken tüm becerileri burada öğrenmeye ücretsiz etkinlikler ile başlayacaksın.</p>
       </article>
       
       <article>
-        <h3>Kendini kanıtla</h3>
+        <h3>Kendini kanıtla!</h3>
         <p>Bootcamp, Hackathon ve Hiring Challenge etkinliklerine katılarak hem becerilerini geliştirecek hem de ödül kazanma fırsatı yakalayacaksın.</p>
       </article>
 
       <article>
-        <h3>İş fırsatı yakala</h3>
+        <h3>İş fırsatı yakala!</h3>
         <p>Sektöründe lider teknoloji şirketleriyle tanışacak ve iş fırsatları yakalayacaksın.</p>
       </article>
     </section>
