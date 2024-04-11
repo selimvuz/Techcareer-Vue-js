@@ -41,7 +41,7 @@
     <section class="why-techcareer">
       <h2>Neden Techcareer.shop?</h2>
       <article>
-        <h3>Ücretsiz etkinliklere katıl</h3>
+        <h3>Ücretli/Ücretsiz etkinliklere katıl</h3>
         <p>Yolun başındasın ama en güzel aşamasındasın! Sektörün için gereken tüm becerileri burada öğrenmeye ücretsiz etkinlikler ile başlayacaksın.</p>
       </article>
       
