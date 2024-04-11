@@ -39,7 +39,7 @@ methods: {
     }
     const predefinedUser = JSON.parse(userString);
     if (this.username === predefinedUser.username && this.password === predefinedUser.password) {
-      localStorage.setItem('user', JSON.stringify({ username: this.username })); // Kullanıcı girişi başarılı
+      localStorage.setItem('user', JSON.stringify({ username: this.username }));
       this.$router.push('/');
     } else {
       alert("Kullanıcı adı veya şifre hatalı!");

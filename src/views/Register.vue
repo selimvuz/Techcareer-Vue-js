@@ -35,7 +35,7 @@
             password: this.password
             };
             localStorage.setItem('predefinedUser', JSON.stringify(user));
-            this.$router.push('/login'); // Kullanıcıyı giriş sayfasına yönlendir
+            this.$router.push('/login');
         }
     }
   }

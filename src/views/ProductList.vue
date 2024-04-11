@@ -30,7 +30,6 @@ export default {
 name: 'ProductList',
 data() {
     return {
-    // Örnek ürün verileri
     products: [
         { id: 1, name: 'Java 101', description: 'Yeni başlayanlar için Java. Profesyoneller tarafından hazırlanan 100 saatlik video içerik, sınavlar, projeler, ek kaynaklar ve dahası...', price: '2499,99₺', image: '/images/java101.jpg' },
         { id: 2, name: 'Vue', description: "En popüler ön yüz kütüphanlerinden Vue için A'dan Z'ye eğitimi içerir. Toplam 40 saatlik video içerik ve mentor desteği!", price: '1799,99₺', image: '/images/vuejs.png' },
@@ -47,10 +46,9 @@ methods: {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let found = cart.find(prod => prod.id === product.id);
     if (found) {
-      // Ürün zaten varsa, uyarı mesajını güncelle
       this.alertMessage = 'Bu ürün zaten sepetinizde.';
       setTimeout(() => {
-        this.alertMessage = ''; // 3 saniye sonra mesajı temizle
+        this.alertMessage = '';
       }, 3000);
     } else {
       cart.push(product);
@@ -75,7 +73,7 @@ methods: {
 
 .card-img-top {
   width: 100%;
-  height: 200px; /* Örnek bir yükseklik */
+  height: 200px;
   object-fit: cover;
 }
 

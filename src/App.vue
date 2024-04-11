@@ -7,7 +7,6 @@
       <router-view></router-view>
     </main>
     <footer>
-      <!-- Footer içeriği -->
     </footer>
   </div>
 </template>
@@ -25,6 +24,6 @@ export default {
 
 <style>
 body {
-  background-color: #F6F8FF; /* Bileşene özel arkaplan rengi */
+  background-color: #F6F8FF;
 }
 </style>
