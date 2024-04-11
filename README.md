@@ -26,3 +26,5 @@ npm run serve
 ![Ürünler](screenshots/2.png)
 ![Sepet](screenshots/3.png)
 ![Giriş](screenshots/4.png)
+
+- Yavuz Selim Doğdu
