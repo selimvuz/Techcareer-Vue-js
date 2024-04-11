@@ -20,8 +20,18 @@
           Kullanıcı
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <li><router-link class="dropdown-item" to="/login">Giriş</router-link></li>
-          <li><router-link class="dropdown-item" to="/register">Kayıt</router-link></li>
+          <li v-if="user">
+            <a class="dropdown-item">{{ user.username }}</a>
+          </li>
+          <li v-if="user">
+            <a class="dropdown-item" href="#" @click="logout">Çıkış</a>
+          </li>
+          <li v-if="!user">
+            <router-link class="dropdown-item" to="/login">Giriş</router-link>
+          </li>
+          <li v-if="!user">
+            <router-link class="dropdown-item" to="/register">Kayıt</router-link>
+          </li>
         </ul>
     </div>
     </ul>
@@ -35,7 +45,19 @@
 
 <script>
 export default {
-  name: 'AppNavbar'
+  name: 'AppNavbar',
+  computed: {
+    user() {
+      return JSON.parse(localStorage.getItem('user'));
+    }
+  },
+  methods: {
+    logout() {
+      localStorage.removeItem('user');
+      this.$router.push('/');
+      window.location.reload();
+    }
+  }
 }
 </script>
 
