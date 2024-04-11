@@ -1,4 +1,5 @@
 <template>
+  <div class="register-page">
     <div class="container mt-5">
       <div class="row justify-content-center">
             <div class="col-md-6">
@@ -16,28 +17,34 @@
                 </form>
             </div>
         </div>
-    </div>
-  </template>
+      </div>
+  </div>
+</template>
   
-  <script>
-  export default {
-    name: 'RegisterPage',
-    data() {
-      return {
-        username: '',
-        password: '',
-      }
-    },
-    methods: {
-        register() {
-            const user = {
-            username: this.username,
-            password: this.password
-            };
-            localStorage.setItem('predefinedUser', JSON.stringify(user));
-            this.$router.push('/login');
-        }
+<script>
+export default {
+  name: 'RegisterPage',
+  data() {
+    return {
+      username: '',
+      password: '',
     }
+  },
+  methods: {
+      register() {
+          const user = {
+          username: this.username,
+          password: this.password
+          };
+          localStorage.setItem('predefinedUser', JSON.stringify(user));
+          this.$router.push('/login');
+      }
   }
-  </script>
+}
+</script>
   
+<style>
+.register-page {
+  margin-top: 250px;
+}
+</style>

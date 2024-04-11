@@ -1,24 +1,28 @@
-# techcareer
+# techcareer.shop
 
-## Project setup
+Techcareer - The Frontend Expedition: Vue.js Bootcamp Project
+
+### Gereksinimler
+
+- [Node.js](https://nodejs.org/en/)
+
+### Kurulum
+
+Proje dizininde node modüllerini kurun:
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+Vue projesini başlatın:
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Ekran Görüntüleri
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+![Ana sayfa](screenshots/1.png)
+![Ürünler](screenshots/2.png)
+![Sepet](screenshots/3.png)
+![Giriş](screenshots/4.png)

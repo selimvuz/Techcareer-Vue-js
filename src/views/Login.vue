@@ -49,3 +49,8 @@ methods: {
 }
 </script>
   
+<style>
+.login-page {
+  margin-top: 250px;
+}
+</style>
