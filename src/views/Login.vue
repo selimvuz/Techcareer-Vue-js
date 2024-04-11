@@ -1,18 +1,22 @@
 <template>
 <div class="login-page">
     <div class="container mt-5">
-        <h2>Giriş Yap</h2>
-        <form @submit.prevent="login">
-            <div class="mb-3">
-            <label for="username" class="form-label">Kullanıcı Adı</label>
-            <input type="text" class="form-control" id="username" v-model="username">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2>Giriş Yap</h2>
+                <form @submit.prevent="login">
+                    <div class="mb-3">
+                    <label for="username" class="form-label">Kullanıcı Adı</label>
+                    <input type="text" class="form-control" id="username" v-model="username">
+                    </div>
+                    <div class="mb-3">
+                    <label for="password" class="form-label">Şifre</label>
+                    <input type="password" class="form-control" id="password" v-model="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Giriş Yap</button>
+                </form>
             </div>
-            <div class="mb-3">
-            <label for="password" class="form-label">Şifre</label>
-            <input type="password" class="form-control" id="password" v-model="password">
-            </div>
-            <button type="submit" class="btn btn-primary">Giriş Yap</button>
-        </form>
+        </div>
     </div>
 </div>
 </template>

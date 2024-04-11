@@ -1,17 +1,21 @@
 <template>
     <div class="container mt-5">
-      <h2>Kayıt Ol</h2>
-      <form @submit.prevent="register">
-        <div class="mb-3">
-          <label for="username" class="form-label">Kullanıcı Adı</label>
-          <input type="text" class="form-control" id="username" v-model="username">
+      <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form @submit.prevent="register">
+                    <h2>Kayıt Ol</h2>
+                    <div class="mb-3">
+                    <label for="username" class="form-label">Kullanıcı Adı</label>
+                    <input type="text" class="form-control" id="username" v-model="username">
+                    </div>
+                    <div class="mb-3">
+                    <label for="password" class="form-label">Şifre</label>
+                    <input type="password" class="form-control" id="password" v-model="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+                </form>
+            </div>
         </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Şifre</label>
-          <input type="password" class="form-control" id="password" v-model="password">
-        </div>
-        <button type="submit" class="btn btn-primary">Kayıt Ol</button>
-      </form>
     </div>
   </template>
   

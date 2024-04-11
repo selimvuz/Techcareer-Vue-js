@@ -36,8 +36,8 @@
     </div>
     </ul>
     <form class="d-flex ms-auto my-2 my-lg-0 align-items-center">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <input class="form-control me-2" type="search" placeholder="Ara" aria-label="Ara">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Ara</button>
     </form>
   </div>
 </nav>
