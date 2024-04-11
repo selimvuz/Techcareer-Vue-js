@@ -22,7 +22,7 @@ npm run serve
 
 ### Ekran Görüntüleri
 
-![Ana sayfa](screenshots/1.png)
+![Ana sayfa](screenshots/5.png)
 ![Ürünler](screenshots/2.png)
 ![Sepet](screenshots/3.png)
 ![Giriş](screenshots/4.png)
